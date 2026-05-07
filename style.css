@@ -8,6 +8,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background: #0057b8;
   color: white;
+  overflow-x: hidden;
 }
 
 .navbar {
@@ -48,30 +49,191 @@ button {
 }
 
 .hero {
-  min-height: 520px;
-  background: linear-gradient(#0066d6, #004fae);
-  display: flex;
-  flex-direction: column;
+  min-height: 640px;
+  background: radial-gradient(circle at 70% 25%, #188cff, #0057b8 45%, #003f8f);
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
   align-items: center;
-  justify-content: center;
-  gap: 30px;
-  padding: 60px 24px;
+  gap: 56px;
+  padding: 40px 8% 60px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "CAPTAIN NUTRITION®";
+  position: absolute;
+  right: -40px;
+  bottom: 20px;
+  font-size: clamp(70px, 12vw, 180px);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.06);
+  letter-spacing: 4px;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h3 {
+  display: inline-block;
+  background: #ffd21f;
+  color: #003f8f;
+  padding: 10px 18px;
+  border-radius: 999px;
+  letter-spacing: 2px;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.hero h1 {
+  text-align: left;
+  font-size: clamp(44px, 6vw, 88px);
+  max-width: 720px;
+}
+
+.hero p {
+  margin-top: 24px;
+  max-width: 560px;
+  font-size: 22px;
+  line-height: 1.45;
+  font-weight: 700;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 760px;
+  border: 10px solid white;
+  border-radius: 28px;
+  box-shadow: 0 18px 0 #002f6c;
+  transform: rotate(2deg);
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
-  font-size:100px;
+  font-size: clamp(34px, 6vw, 72px);
   font-weight: 900;
   color: #ffd21f;
   text-align: center;
   text-shadow: 5px 5px 0 #002f6c;
+  line-height: 0.95;
 }
+
+/* SCROLL STORY */
+
+.story {
+  padding: 100px 8%;
+  background: linear-gradient(#0057b8, #74b843, #ffffff);
+}
+
+.story-intro,
+.story-chapter,
+.story-question {
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 48px;
+  border-radius: 32px;
+  background: white;
+  color: #003f8f;
+  box-shadow: 0 14px 0 #002f6c;
+}
+
+.story-intro {
+  text-align: center;
+  background: #ffd21f;
+}
+
+.eyebrow {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #003f8f;
+  margin-bottom: 18px;
+}
+
+.story h1 {
+  font-size: clamp(38px, 5vw, 64px);
+  color: #003f8f;
+  text-shadow: none;
+  margin-bottom: 24px;
+  line-height: 1;
+}
+
+.story h2 {
+  font-size: clamp(22px, 4vw, 36px);
+  line-height: 1.05;
+  font-weight: 900;
+  color: #f15a24;
+  margin-bottom: 20px;
+}
+
+.story p {
+  font-size: clamp(18px, 2.2vw, 26px);
+  line-height: 1.55;
+  font-weight: 700;
+}
+
+.story-chapter span {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #74b843;
+}
+
+.story-chapter.green {
+  background: #74b843;
+  color: white;
+}
+
+.story-chapter.green h2,
+.story-chapter.green span {
+  color: #ffd21f;
+}
+
+.story-question {
+  text-align: center;
+  background: #003f8f;
+  color: white;
+}
+
+.story-question h2 {
+  color: #ffd21f;
+}
+
+.story-chapter.final {
+  background: #ffd21f;
+}
+
+.story-chapter.final h2 {
+  color: #003f8f;
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(70px) scale(0.92);
+  transition: opacity 0.75s ease, transform 0.75s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* EXISTING SECTIONS */
 
 .timeline,
 .icon-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  padding: 80px 8%;
+  padding: 40px 8% 20px;
   align-items: center;
 }
 
@@ -164,19 +326,33 @@ h1 {
 footer {
   background: #003f8f;
   text-align: center;
-  padding: 32px;
+  padding: 18px 32px;
   font-weight: 700;
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 850px) {
   .navbar {
     flex-direction: column;
     gap: 18px;
+    padding: 18px 24px;
   }
 
   nav {
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .story {
+    padding: 70px 5%;
+  }
+
+  .story-intro,
+  .story-chapter,
+  .story-question {
+    max-width: 900px;
+    margin: 0 auto 40px;
   }
 
   .timeline,
@@ -185,4 +361,10 @@ footer {
   .image-grid {
     grid-template-columns: 1fr;
   }
+}
+.trademark {
+  font-size: 0.38em;
+  vertical-align: top;
+  position: relative;
+  top: 0.2em;
 }
