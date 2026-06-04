@@ -255,7 +255,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  padding: 40px 8% 20px;
+  padding: 40px 8% 0px;
   align-items: center;
 }
 .timeline img {
@@ -263,7 +263,15 @@ h1 {
   margin: 0 auto;
   max-width: 100%;
 }
+.timeline-center {
+  text-align: center;
+}
 
+.timeline-copyright {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 700;
+}
 .text-card {
   background: white;
   color: #003f8f;
@@ -345,11 +353,6 @@ h1 {
   min-height: 200px;
 }
 
-.today {
-  padding: 80px 8%;
-  text-align: center;
-}
-
 .story-ending {
   text-align: center;
   padding: 30px 20px;
@@ -358,7 +361,7 @@ h1 {
 
 .story-ending h2 {
   color: #ffd21f;
-  margin-bottom: 16px;
+  margin-bottom: 5px;
 }
 
 .story-ending p {
