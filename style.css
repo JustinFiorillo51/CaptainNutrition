@@ -250,21 +250,65 @@ h1 {
 
 /* EXISTING SECTIONS */
 
-.timeline,
+.timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 90px;
+  padding: 40px 8%;
+  width: 100%;
+}
+
+.timeline-center {
+  width: 300px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-center img {
+  width: 100%;
+  max-width: 300px;
+  display: block;
+}
+
+.timeline-copyright {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.text-card.yellow {
+  width: 420px;
+  max-width: 420px;
+  background: #ffd21f;
+  color: #003f8f;
+  border-radius: 28px;
+  padding: 36px;
+  box-shadow: 0 12px 0 #002f6c;
+}
+
+.text-card.yellow h3 {
+  font-size: 28px;
+  color: #003f8f;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.text-card.yellow p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #003f8f;
+}
+
 .icon-section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 28px;
-  padding: 40px 8% 0px;
+  padding: 40px 8% 0;
   align-items: center;
-}
-.timeline img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-}
-.timeline-center {
-  text-align: center;
 }
 
 .timeline-copyright {
@@ -274,10 +318,11 @@ h1 {
 }
 .text-card {
   background: white;
-  color: #003f8f;
+  color: #dce3ec;
   border-radius: 28px;
   padding: 36px;
   box-shadow: 0 12px 0 #002f6c;
+  max-width: 520px;
 }
 
 .text-card h2 {
@@ -430,16 +475,45 @@ footer {
     margin: 0 auto 40px;
   }
 
-  .timeline,
-  .icon-section,
-  .image-row,
-  .image-grid {
-    grid-template-columns: 1fr;
-  }
+.timeline {
+  flex-direction: column;
+  gap: 32px;
+}
+
+.icon-section,
+.image-row,
+.image-grid {
+  grid-template-columns: 1fr;
+}
 }
 .trademark {
   font-size: 0.38em;
   vertical-align: top;
   position: relative;
   top: 0.2em;
+}
+
+.timeline {
+    display: grid !important;
+    grid-template-columns: 300px 420px;
+    justify-content: center;
+    align-items: center;
+    column-gap: 90px;
+
+    padding: 20px 8% 0; /* top right/left bottom */
+}
+
+.timeline-center {
+  width: 300px;
+  justify-self: end;
+}
+
+.timeline-center img {
+  width: 300px;
+  max-width: 300px;
+}
+
+.text-card.yellow {
+  width: 420px;
+  justify-self: start;
 }
