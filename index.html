@@ -7,19 +7,36 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
+<body id="top">
   <header class="navbar">
-    <div class="logo">Captain Nutrition<span class="trademark">®</span></div>
+    <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+      <a href="#top" style="text-decoration: none; color: inherit;">
+        Captain Nutrition<span class="trademark">®</span>
+      </a>
 
+      <a href ="#top"><img src="large.png" alt="Captain Nutrition" style="width: 50px; height: auto;" /></a>
+    </div>
+        
     <nav>
-      <a href="#mission">Our Mission</a>
+      <a href="#story">Our Story</a>
       <a href="#guidance">Divine Guidance</a>
-      <a href="#">Peace Love Cafe</a>
+      <a href="#mission">Our Mission</a>
+    <!-- <a href="#">Peace Love Cafe</a>
       <a href="#">FAQ</a>
-      <a href="#">Legal</a>
+      <a href="#">Legal</a> -->
     </nav>
 
-    <button>Our Story</button>
+    <a href="mailto:captainnutrition@gmail.com" style="
+      background: #ffd21f;
+      border: none;
+      padding: 12px 22px;
+      border-radius: 999px;
+      font-weight: 900;
+      color: #003f8f;
+      text-decoration: none;
+    ">
+        Contact Us
+    </a>
   </header>
 
   <section class="hero">
@@ -31,7 +48,7 @@
             </div>
         <div style="margin-top: 8px;">Has Arrived</div>
       </h1>
-      <p style="transform: translateY(-50px);"`> A bold mission from another galaxy to inspire better nutrition, better choices, and a better Planet Earth. </p>
+      <p style="transform: translateY(-50px);"> A bold mission from another galaxy to inspire better nutrition, better choices, and a better Planet Earth. </p>
     </div>
 
     <div class="hero-media">
@@ -44,9 +61,9 @@
     </div>
   </section>
 
-  <section class="story" id="mission">
+  <section class="story" id="story">
     <div class="story-intro reveal">
-      <p class="eyebrow">Website · CaptainNutrition.com</p>
+      <p class="eyebrow">CaptainNutrition.com</p>
       <h1>The Story Begins</h1>
       <p> I, Captain Nutrition<span class="trademark">®</span>, have arrived from another galaxy to save Planet Earth from bad food. </p>
     </div>
@@ -118,7 +135,7 @@
     </div>
   </section>
 
-  <section class="timeline">
+  <section class="timeline" id="mission">
     <div class = "timeline-center">
       <div class = "captain-photo">
         <img src="Screenshot 2026-06-25 at 3.24.47 PM.png" alt="Captain Nutrition" />
@@ -128,8 +145,10 @@
     <div class="text-card yellow">
       <h3>My Mission Statement</h3>
       <p>
+        <b>
         To raise awareness about eating, love, nutrition,
         and the responsibility humans have to care for Earth.
+        </b>
       </p>
     </div>
   </section>
@@ -142,44 +161,25 @@
       </video>
   </div>
 </section>
-<!--
-  <section class="evolution">
-    <h2>Captain Nutrition<span class="trademark">®</span>’s Message</h2>
 
-    <div class="image-row">
-      <div class="image-box small">Love</div>
-      <div class="image-box small">Health</div>
-      <div class="image-box small">Earth</div>
-      <div class="image-box small">Future</div>
-    </div>
-  </section>
 
-  <section class="icon-section">
-    <div class="image-box large">Image Here</div>
-
-    <div class="text-card">
-      <h2>WHERE YOU<br />MIGHT FIND ME</h2>
-      <p>
-        In schools, cafes, communities, gardens, and anywhere people are learning
-        how to take better care of themselves and the planet.
-      </p>
-    </div>
-
-    <div class="image-box large">Image Here</div>
-  </section>
-
-  <section class="today">
-    <h2>The Divine Guidance</h2>
-
-    <div class="image-grid">
-      <div class="image-box">Nutrition</div>
-      <div class="image-box">Kindness</div>
-      <div class="image-box">Planet Earth</div>
-    </div>
-  </section>
--->
   <footer>
-    <p>Home · Our Mission · Peace Love Cafe · FAQ · Contact Us</p>
+    <div style="text-align: center;">
+      <nav style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 0;">
+          <a href="#top">Home</a>
+          <span style="margin: 0 10px;">·</span>
+          <a href="#story">Our Story</a>
+          <span style="margin: 0 10px;">·</span>
+          <span>Contact Norman Hauptman:</span>
+          <a href="mailto:captainnutrition@gmail.com" style="text-decoration: underline; margin-left: 6px;">
+              captainnutrition@gmail.com
+          </a>
+          <span style="margin: 0 10px;">·</span>
+          <a href="tel:+13472767149" style="text-decoration: underline;">
+              (347) 276-7149
+          </a>
+      </nav>
+    </div>
   </footer>
 
   <script>
