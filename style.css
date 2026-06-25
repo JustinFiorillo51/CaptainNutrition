@@ -481,9 +481,39 @@ footer {
 
 @media (max-width: 850px) {
   .navbar {
-    flex-direction: column;
-    gap: 18px;
-    padding: 18px 24px;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;   
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 24px; 
+    gap: 12px 0;       
+
+  nav {
+    order: 3;        
+    width: 100%;        
+    justify-content: center;
+    gap: 20px;        
+    padding-top: 4px;
+  }
+
+  .logo {
+    order: 1;
+    font-size: 20px; 
+  }
+
+  .contact-dropdown {
+    order: 2;
+  }
+
+  .contact-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .dropdown-content {
+    right: 0;
+    min-width: 180px;
   }
 
   .hero {
@@ -497,11 +527,6 @@ footer {
   .hero-under-video {
     max-width: 360px;
     height: 500px;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
   }
 
   .story {
