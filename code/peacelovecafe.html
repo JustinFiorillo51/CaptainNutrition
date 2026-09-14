@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Isaiah Peace Food – Peace Love Cafe</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="top">
+  <header class="navbar">
+    <div class="logo" style="display: flex; align-items: center; gap: 8px;">
+      <a href="index.html" style="text-decoration: none; color: inherit;">
+        Captain Nutrition<span class="trademark">®</span>
+      </a>
+      <a href="index.html"><img src="media/large.png" alt="Captain Nutrition" style="width: 50px; height: auto;" /></a>
+    </div>
+        
+    <nav>
+      <a href="index.html">Captain Nutrition</a>
+      <a href="cafe.html" style="color: #ffd21f;">Peace Love Cafe</a>
+    </nav>
+
+    <div class="contact-dropdown">
+      <button class="contact-btn">Contact Us</button>
+      <div class="dropdown-content">
+        <a href="mailto:CaptainNutrition.inc@gmail.com">
+          CaptainNutrition.inc@gmail.com
+        </a>
+        <a href="tel:+13472767149">
+          (347) 276-7149
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero" style="background: radial-gradient(circle at 70% 25%, #74b843, #0057b8 45%, #003f8f);">
+    <div class="hero-text">
+     <h3>PEACE LOVE CAFE</h3>
+      <h1>
+        <br>
+        Isaiah Peace Food
+        <div style="margin-top: 8px; font-size: 0.6em; color: #ffd21f;">Nourishment for Body & Soul</div>
+      </h1>
+      <p> Wholesome, organic food crafted in harmony with nature, love, and divine intention. </p>
+    </div>
+
+    <div class="hero-media">
+        <ul class="cafe-manifesto">
+            <li><span>✦</span> Brewing calm in a chaotic world.</li>
+            <li><span>✦</span> Peace by the cup, love by the loaf.</li>
+            <li><span>✦</span> Grounded in nature, poured with peace.</li>
+            <li><span>✦</span> Sip slowly. Live peacefully.</li>
+            <li><span>✦</span> Organic goodness for a grounded spirit.</li>
+            <li><span>✦</span> Where every sip starts a quiet revolution.</li>
+        </ul>
+    </div>
+  </section>
+
+  <section class="story" id="menu">
+    <div class="story-intro reveal">
+      <p class="eyebrow">PeaceLoveCafe.com</p>
+      <h1>The Menu of Life</h1>
+      <p> Built with ingredients straight from the earth to sustain health, vitality, and peace. </p>
+    </div>
+
+    <div class="story-chapter reveal">
+      <span>01</span>
+      <h2>Living Greens & Vitality Salads</h2>
+      <p>Fresh organic field greens, vibrant vegetables, sprouted seeds, and cold-pressed dressings made to elevate your energy.</p>
+    </div>
+
+    <div class="story-chapter reveal green">
+      <span>02</span>
+      <h2>Supreme Earth Bowls</h2>
+      <p>Hearty grains, roasted root vegetables, legumes, and savory herb infusions designed to nourish body and spirit.</p>
+    </div>
+
+    <div class="story-chapter reveal">
+      <span>03</span>
+      <h2>Botanical Elixirs & Teas</h2>
+      <p>Healing herbal infusions, fresh fruit nectars, and pure spring waters crafted to refresh and restore.</p>
+    </div>
+
+    <div class="story-chapter reveal final" id="gathering">
+      <span>04</span>
+      <h2>A Place of Gathering</h2>
+      <p>
+        The Isaiah Peace Food cafe is more than a place to eat. It's a community sanctuary dedicated to unconditional love, wholesome choices, and fellowship.
+      </p>
+    </div>
+  </section>
+
+  <section class="timeline" style="margin-bottom: 40px;">
+    <div class="timeline-center">
+      <div class="captain-photo">
+        <img src="media/large.png" alt="Captain Nutrition" />
+      </div>
+      <h3 class="timeline-copyright">© HAUPTMAN 2026</h3>
+    </div>
+    <div class="text-card yellow">
+      <h3>The Cafe Philosophy</h3>
+      <p>
+        <b>
+        "And God said, Behold, I have given you every herb bearing seed... to you it shall be for meat."<br><br>
+        Serving pure nutrition with love.
+        </b>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div style="text-align: center;">
+      <nav style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 8px 0;">
+          <a href="index.html">Home</a>
+          <span style="margin: 0 10px;">·</span>
+          <a href="cafe.html">Peace Love Cafe</a>
+          <span style="margin: 0 10px;">·</span>
+          <span>Contact Norman Hauptman:</span>
+          <a href="mailto:CaptainNutrition.inc@gmail.com" style="text-decoration: underline; margin-left: 6px;">
+              CaptainNutrition.inc@gmail.com
+          </a>
+          <span style="margin: 0 10px;">·</span>
+          <a href="tel:+13472767149" style="text-decoration: underline;">
+              (347) 276-7149
+          </a>
+      </nav>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    reveals.forEach((section) => observer.observe(section));
+  </script>
+</body>
+</html>
