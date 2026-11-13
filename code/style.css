@@ -280,6 +280,7 @@ h1 {
   line-height: 1.05;
   font-weight: 900;
   color: #f15a24;
+  text-align: center;
   margin-bottom: 20px;
 }
 
@@ -287,6 +288,7 @@ h1 {
   font-size: clamp(18px, 2.2vw, 26px);
   line-height: 1.55;
   font-weight: 700;
+  text-align:center;
 }
 
 .story-chapter span {
@@ -305,16 +307,21 @@ h1 {
 .story-chapter.green h2,
 .story-chapter.green span {
   color: #ffd21f;
+  text-align: center;
 }
 
 .story-question {
   text-align: center;
-  background: #003f8f;
+  background: #ffd21f;
   color: white;
 }
 
+.story-question p {
+  color: #003f8f;
+}
+
 .story-question h2 {
-  color: #ffd21f;
+  color: #003f8f;
 }
 
 .story-chapter.final {
